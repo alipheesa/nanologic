@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+nanologic/Variable.py
+nanologic/__init__.py
+nanologic/operations.py
+nanologic/util.py
+nanologic.egg-info/PKG-INFO
+nanologic.egg-info/SOURCES.txt
+nanologic.egg-info/dependency_links.txt
+nanologic.egg-info/requires.txt
+nanologic.egg-info/top_level.txt
