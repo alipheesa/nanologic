@@ -15,7 +15,7 @@ setup_args = dict(
     author_email='alipheesa@gmail.com',
     keywords=['nanologic', 'logic'],
     url='https://github.com/alipheesa/nanologic',
-    download_url='https://github.com/alipheesa/nanologic'
+    download_url='https://pypi.org/project/nanologic/'
 )
 
 install_requires = [
