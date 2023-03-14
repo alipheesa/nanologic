@@ -3,7 +3,7 @@ Name: nanologic
 Version: 0.1
 Summary: Simple package for simple logical operations
 Home-page: https://github.com/alipheesa/nanologic
-Download-URL: https://github.com/alipheesa/nanologic
+Download-URL: https://pypi.org/project/nanologic/
 Author: Alexander Isaychikov
 Author-email: alipheesa@gmail.com
 License: MIT
