@@ -14,8 +14,8 @@ setup_args = dict(
     author='Alexander Isaychikov',
     author_email='alipheesa@gmail.com',
     keywords=['nanologic', 'logic'],
-    url='https://github.com/ncthuc/elastictools',
-    download_url='https://pypi.org/project/elastictools/'
+    url='https://github.com/alipheesa/nanologic',
+    download_url='https://github.com/alipheesa/nanologic'
 )
 
 install_requires = [
