@@ -5,8 +5,8 @@
 # email alipheesa@gmail.com
 # -----------------------------------------------------------
 
-from src.util import _cartesian, _get_reduced_implicant_list, _expand_vector_to_table
-from src.Variable import Variable
+from .util import _cartesian, _get_reduced_implicant_list, _expand_vector_to_table
+from .Variable import Variable
 
 
 def get_truth_table(function):

@@ -1,15 +1,21 @@
+# -----------------------------------------------------------
+# © 2023 Alexander Isaychikov
+# Released under MIT License
+# Minsk, Belarus
+# email alipheesa@gmail.com
+# -----------------------------------------------------------
 
-from . import Variable
-from . import util
-from . import operations
+from .Variable import Variable
+from .operations import get_truth_table, print_truth_table, get_index_form, \
+    build_PCNF, build_PDNF, minimize_PCNF, minimize_PDNF
 
 __all__ = [
-    'Variable.Variable',
-    'operations.get_truth_table',
-    'operations.print_truth_table',
-    'operations.get_index_form',
-    'operations.build_PCNF',
-    'operations.build_PDNF',
-    'operations.minimize_PCNF',
-    'operations.minimize_PDNF'
+    'Variable',
+    'get_truth_table',
+    'print_truth_table',
+    'get_index_form',
+    'build_PCNF',
+    'build_PDNF',
+    'minimize_PCNF',
+    'minimize_PDNF'
 ]
