@@ -1,5 +1,5 @@
 build/
 dist/
-nanologic.egg-info/
+*.egg-info/
 nanologic/__pycache__/
 .idea/
