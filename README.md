@@ -12,4 +12,4 @@ Current implementation deals with logical expressions as computation graphs and 
 Current implementation's functionality is extremly limited and this package is therefore not appropriate for any major use. 
 All this was created as part of university work.
 
-You can find implementation in both [Python](Python) and [IPython](https://github.com/alipheesa/University-Study/tree/main/OS/operations%20over%20logical%20functions/IPython).
+You can find implementation in both [Python](https://github.com/alipheesa/University-Study/tree/main/OS/operations%20over%20logical%20functions/Python) and [IPython](https://github.com/alipheesa/University-Study/tree/main/OS/operations%20over%20logical%20functions/IPython).
