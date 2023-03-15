@@ -7,7 +7,7 @@
 
 from .Variable import Variable
 from .operations import get_truth_table, print_truth_table, get_index_form, \
-    build_PCNF, build_PDNF, minimize_PCNF, minimize_PDNF
+    build_PCNF, build_PDNF, minimize_PCNF, minimize_PDNF, build_numPCNF, build_numPDNF
 
 __all__ = [
     'Variable',
@@ -17,5 +17,7 @@ __all__ = [
     'build_PCNF',
     'build_PDNF',
     'minimize_PCNF',
-    'minimize_PDNF'
+    'minimize_PDNF',
+    'build_numPCNF',
+    'build_numPDNF'
 ]
