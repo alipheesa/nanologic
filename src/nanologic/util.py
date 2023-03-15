@@ -67,8 +67,8 @@ def _get_sorted_input(input_list):
     sorted_list = []
 
     for i in range(n + 1):
-        temp = input_list[sum_list == i]
-        sorted_list.append(list(temp))
+        combination = input_list[sum_list == i]
+        sorted_list.append(list(combination))
     sorted_list.append([])
 
     return sorted_list

@@ -148,14 +148,51 @@ def build_PDNF(value, custom_operands=None):
 
     for i, c in enumerate(combinations):
         def get_minterm_str(combination):
-            temp = ""
+            string = ""
             for i, operand in enumerate(operands):
-                temp += '' if combination[i] == 1 else '~'
-                temp += operand
-                temp += '&' if i < len(operands) - 1 else ''
-            return temp
+                string += '' if combination[i] == 1 else '~'
+                string += operand
+                string += '&' if i < len(operands) - 1 else ''
+            return string
 
         out += '(' + get_minterm_str(c) + ')'
+        out += ' | ' if i < len(combinations) - 1 else ''
+
+    return out
+
+
+def build_numPDNF(value):
+    """
+    Builds numerical form for PDNF of a given function or truth table
+
+    Parameters
+    ----------
+    value : Variable/list
+        Input function or truth table's single output vector
+
+    Returns
+    -------
+    str
+        String representation of numerical PDNF
+    """
+    if isinstance(value, Variable):
+        table = get_truth_table(value)
+    else:
+        table = _expand_vector_to_table(value)
+
+    combinations = [c[:-1] for c in table if c[-1] == 1]
+    if len(combinations) == 0:
+        return 'numerical PDNF does not exist'
+    out = ""
+
+    for i, c in enumerate(combinations):
+        def get_minterm_str(combination):
+            string = ""
+            for bit in combination:
+                string += str(bit)
+            return string
+
+        out += ' ' + get_minterm_str(c) + ' '
         out += ' | ' if i < len(combinations) - 1 else ''
 
     return out
@@ -196,14 +233,51 @@ def build_PCNF(value, custom_operands=None):
 
     for i, c in enumerate(combinations):
         def get_minterm_str(combination):
-            temp = ""
+            string = ""
             for i, operand in enumerate(operands):
-                temp += '' if combination[i] == 0 else '~'
-                temp += operand
-                temp += '|' if i < len(operands) - 1 else ''
-            return temp
+                string += '' if combination[i] == 0 else '~'
+                string += operand
+                string += '|' if i < len(operands) - 1 else ''
+            return string
 
         out += '(' + get_minterm_str(c) + ')'
+        out += ' & ' if i < len(combinations) - 1 else ''
+
+    return out
+
+
+def build_numPCNF(value):
+    """
+    Builds numerical form for PCNF of a given function or truth table
+
+    Parameters
+    ----------
+    value : Variable/list
+        Input function or truth table's single output vector
+
+    Returns
+    -------
+    str
+        String representation of numerical PCNF
+    """
+    if isinstance(value, Variable):
+        table = get_truth_table(value)
+    else:
+        table = _expand_vector_to_table(value)
+
+    combinations = [c[:-1] for c in table if c[-1] == 0]
+    if len(combinations) == 0:
+        return 'numerical PDNF does not exist'
+    out = ""
+
+    for i, c in enumerate(combinations):
+        def get_minterm_str(combination):
+            string = ""
+            for bit in combination:
+                string += str(bit)
+            return string
+
+        out += ' ' + get_minterm_str(c) + ' '
         out += ' & ' if i < len(combinations) - 1 else ''
 
     return out
